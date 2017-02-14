@@ -9,15 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var switchOutlet: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func switchPressed(_ sender: UISwitch) {
+        
+        if switchOutlet.isOn {
+            self.view.backgroundColor = UIColor.white
+        } else {
+            self.view.backgroundColor = UIColor.black
+        }
+        
     }
 
 
